@@ -8,6 +8,11 @@ class NoteContainer extends Component {
   state = {
     noteArr: [],
     noteItem: {}
+
+
+  state = {
+    noteArr: []
+
   }
 
 componentDidMount() {
@@ -32,6 +37,13 @@ handleNoteViewer = (note) => {
         <div className='container'>
           <Sidebar notes={this.state.noteArr} handleNoteViewer={this.handleNoteViewer}/>
           <Content note={this.state.noteItem}/>
+render() {
+  return (
+    <Fragment>
+        <Search />
+        <div className='container'>
+          <Sidebar notes={this.state.noteArr}/>
+          <Content />
         </div>
       </Fragment>
     );
