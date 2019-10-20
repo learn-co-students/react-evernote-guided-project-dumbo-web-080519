@@ -11,20 +11,20 @@ import Instructions from './Instructions';
           refactor to get this Content component to work.
 */
 class Content extends Component {
-  renderContent = () => {
-    if (false) {
-      return <NoteEditor />;
-    } else if (false) {
-      return <NoteViewer />;
-    } else {
-      return <Instructions />;
-    }
-  }
+  // renderContent = () => {
+  //   if (false) {
+  //     // return <NoteEditor />;
+  //   } else if (false) {
+    //   } else {
+      //     return <Instructions />;
+  //   }
+  // }
 
   render() {
     return (
       <div className='master-detail-element detail'>
-        {this.renderContent()}
+        {/* this.renderContent() */}
+         <NoteViewer note={this.props.note}/>
       </div>
     );
   }
